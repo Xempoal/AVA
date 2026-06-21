@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AVA Bienes Raíces — Inmobiliaria en Xalapa, Veracruz</title>
+  <meta name="description" content="Casas, departamentos, terrenos y locales en venta y renta en Xalapa, Coatepec, Banderilla y Jilotepec. Propiedades verificadas con AVA Bienes Raíces." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <img src="img/logo.png" alt="AVA Bienes Raíces" class="brand__logo">
+      </a>
+      <nav class="nav__links">
+        <a href="index.html" class="active">Inicio</a>
+        <a href="propiedades.html">Propiedades</a>
+        <a href="index.html#nosotros">Nosotros</a>
+        <a href="index.html#equipo-sec">Equipo</a>
+        <a href="index.html#contacto">Contacto</a>
+      </nav>
+      <div class="nav__cta">
+        <a href="propiedades.html" class="btn btn--ghost">Ver propiedades</a>
+        <a href="https://wa.me/522281234500?text=Hola%2C%20me%20interesa%20conocer%20sus%20propiedades" class="btn btn--wa">WhatsApp</a>
+        <button class="nav__toggle" aria-label="Menú"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Hero scrollytelling ===== -->
+  <section class="hero">
+    <div class="hero__pin">
+      <div class="hero__frame"><img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1900&q=80" alt="Fachada de casa moderna" /></div>
+      <div class="hero__frame"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1900&q=80" alt="Recibidor" /></div>
+      <div class="hero__frame"><img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1900&q=80" alt="Sala de estar" /></div>
+      <div class="hero__frame"><img src="https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&w=1900&q=80" alt="Cocina integral" /></div>
+      <div class="hero__frame"><img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1900&q=80" alt="Recámara principal" /></div>
+
+      <div class="hero__content">
+        <div class="hero__caption" data-step="0">
+          <p class="eyebrow">AVA Bienes Raíces · Xalapa, Veracruz</p>
+          <h1>Encuentra tu próximo hogar en Xalapa</h1>
+          <p>Desliza para recorrer una propiedad por dentro.</p>
+        </div>
+        <div class="hero__caption" data-step="1">
+          <h1>Espacios que se sienten como en casa</h1>
+        </div>
+        <div class="hero__caption" data-step="2">
+          <h1>Cientos de propiedades verificadas</h1>
+        </div>
+        <div class="hero__caption" data-step="3">
+          <h1>Cada detalle, pensado para ti</h1>
+        </div>
+        <div class="hero__caption" data-step="4">
+          <h1>Empieza tu búsqueda hoy</h1>
+          <p><a href="propiedades.html" class="btn btn--gold btn--lg" style="margin-top:18px">Explorar propiedades</a></p>
+        </div>
+      </div>
+      <div class="hero__scrollhint">Desliza<span></span></div>
+    </div>
+  </section>
+
+  <!-- ===== Buscador rápido ===== -->
+  <div class="container">
+    <form id="quick-search" class="search">
+      <div class="search__card">
+        <div class="field">
+          <label>Tipo de propiedad</label>
+          <select name="tipo">
+            <option value="">Todos</option>
+            <option value="casa">Casa</option>
+            <option value="departamento">Departamento</option>
+            <option value="terreno">Terreno</option>
+            <option value="local">Local comercial</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Ciudad</label>
+          <select name="ciudad">
+            <option value="">Todas</option>
+            <option value="Xalapa">Xalapa</option>
+            <option value="Coatepec">Coatepec</option>
+            <option value="Banderilla">Banderilla</option>
+            <option value="Jilotepec">Jilotepec</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Precio máximo</label>
+          <select name="precio">
+            <option value="">Sin límite</option>
+            <option value="1000000">Hasta $1,000,000</option>
+            <option value="2000000">Hasta $2,000,000</option>
+            <option value="3500000">Hasta $3,500,000</option>
+            <option value="6500000">Hasta $6,500,000</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Recámaras (mín.)</label>
+          <select name="recamaras" disabled title="Disponible en el listado">
+            <option>Cualquiera</option>
+          </select>
+        </div>
+        <button class="btn btn--primary btn--lg" type="submit">Buscar</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- ===== Categorías de inmuebles ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Explora por tipo</p>
+        <h2>¿Qué estás buscando?</h2>
+        <p>Encuentra el inmueble ideal según tu necesidad. Da clic en una categoría.</p>
+      </div>
+      <div class="cat-grid" id="categorias"></div>
+    </div>
+  </section>
+
+  <!-- ===== Destacadas ===== -->
+  <section class="section section--cream">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Selección AVA</p>
+        <h2>Propiedades destacadas</h2>
+        <p>Una muestra de nuestras mejores oportunidades en Xalapa y la región cafetalera.</p>
+      </div>
+      <div class="grid-cards" id="destacadas"></div>
+      <div class="loadmore-wrap">
+        <a href="propiedades.html" class="btn btn--gold btn--lg">Ver todas las propiedades</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Nosotros ===== -->
+  <section class="section" id="nosotros">
+    <div class="container about">
+      <div class="about__img reveal">
+        <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=1100&q=80" alt="Equipo AVA Bienes Raíces" loading="lazy" />
+      </div>
+      <div class="reveal">
+        <p class="eyebrow">Nosotros</p>
+        <h2>Creciendo contigo en el mercado de Xalapa</h2>
+        <p>En AVA Bienes Raíces acompañamos a cada familia e inversionista de principio a fin: desde encontrar la propiedad ideal hasta la firma de escrituras. Conocemos Xalapa, Coatepec, Banderilla y Jilotepec como la palma de nuestra mano.</p>
+        <p>Trabajamos con los principales bancos para que estrenar hogar sea más sencillo, con asesoría honesta y propiedades verificadas.</p>
+        <div class="stats">
+          <div><b>+12</b><span>años de experiencia</span></div>
+          <div><b>+850</b><span>familias asesoradas</span></div>
+          <div><b>4</b><span>municipios cubiertos</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Créditos ===== -->
+  <section class="section section--cream" id="creditos-sec">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Financiamiento</p>
+        <h2>Créditos que manejamos</h2>
+        <p>Estrenar tu hogar es más fácil de lo que crees. Te asesoramos con el crédito que mejor se adapte a ti.</p>
+      </div>
+      <div class="credits-grid" id="creditos"></div>
+      <div class="reveal" style="margin-top:32px">
+        <a href="https://wa.me/522281234500?text=Hola%2C%20quiero%20asesor%C3%ADa%20sobre%20cr%C3%A9ditos%20para%20comprar%20una%20propiedad" class="btn btn--primary btn--lg">Quiero asesoría de crédito</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Equipo ===== -->
+  <section class="section" id="equipo-sec">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Nuestro equipo</p>
+        <h2>Conoce a tus asesores</h2>
+        <p>Cada asesor tiene su propio perfil con sus propiedades y datos de contacto directo.</p>
+      </div>
+      <div class="team-grid" id="equipo"></div>
+    </div>
+  </section>
+
+  <!-- ===== Contacto (rediseñado, moderno y simple) ===== -->
+  <section class="section section--cream" id="contacto">
+    <div class="container">
+      <div class="contact-wrap reveal">
+        <div class="contact-intro">
+          <p class="eyebrow">Contacto</p>
+          <h2>Vende o compra tu propiedad con nosotros</h2>
+          <p class="contact-sub">¿Quieres vender tu casa? La colocamos por ti con la mejor estrategia. ¿Buscas comprar? Te acompañamos en todo el proceso. Escríbenos y un asesor te atiende hoy mismo.</p>
+          <div class="contact-buttons">
+            <a href="https://wa.me/522281234500?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n" class="btn btn--wa btn--lg">Escribir por WhatsApp</a>
+            <a href="tel:+522281234500" class="btn btn--ghost btn--lg">Llamar ahora</a>
+          </div>
+        </div>
+
+        <form class="contact-card" id="contact-form">
+          <h3>Cuéntanos qué necesitas</h3>
+
+          <!-- Paso 1: vender o comprar -->
+          <div class="field">
+            <label>¿Qué quieres hacer?</label>
+            <div class="choice" id="choice-intent">
+              <button type="button" class="choice__btn" data-val="vender">Quiero vender</button>
+              <button type="button" class="choice__btn" data-val="comprar">Quiero comprar</button>
+            </div>
+            <input type="hidden" name="intent" id="intent" required>
+          </div>
+
+          <!-- Paso 2: tipo de inmueble (aparece tras elegir) -->
+          <div class="field contact-step" id="step-tipo">
+            <label id="tipo-label">¿Qué tipo de inmueble?</label>
+            <div class="choice choice--wrap" id="choice-tipo">
+              <button type="button" class="choice__btn" data-val="casa">Casa</button>
+              <button type="button" class="choice__btn" data-val="departamento">Departamento</button>
+              <button type="button" class="choice__btn" data-val="terreno">Terreno</button>
+              <button type="button" class="choice__btn" data-val="local">Local comercial</button>
+            </div>
+            <input type="hidden" name="tipo" id="tipo-inmueble">
+          </div>
+
+          <!-- Paso 3: datos -->
+          <div class="contact-step" id="step-datos">
+            <div class="field"><label>Nombre</label><input type="text" placeholder="Tu nombre" required></div>
+            <div class="field"><label>Teléfono / WhatsApp</label><input type="tel" placeholder="228 000 0000" required></div>
+            <button type="submit" class="btn btn--primary btn--block btn--lg">Enviar solicitud</button>
+          </div>
+
+          <div class="form-note" id="contact-note">¡Gracias! Un asesor te contactará muy pronto. (Demo: no se envía información real.)</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <a href="index.html" class="brand">
+          <img src="img/logo.png" alt="AVA Bienes Raíces" class="brand__logo">
+        </a>
+        <p style="margin-top:16px; max-width:280px;">Inmobiliaria en Xalapa, Veracruz. Casas, departamentos, terrenos y locales en venta y renta.</p>
+        <div class="footer__socials">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="WhatsApp">wa</a>
+        </div>
+      </div>
+      <div>
+        <h4>Navegación</h4>
+        <a href="index.html">Inicio</a>
+        <a href="propiedades.html">Propiedades</a>
+        <a href="index.html#nosotros">Nosotros</a>
+        <a href="index.html#contacto">Contacto</a>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <a href="tel:+522281234500">228 123 4500</a>
+        <a href="mailto:contacto@avabienesraices.com">contacto@avabienesraices.com</a>
+        <a href="#">Av. Ávila Camacho, Xalapa, Ver.</a>
+        <a href="https://wa.me/522281234500">WhatsApp directo</a>
+      </div>
+      <div>
+        <h4>Ubicación</h4>
+        <iframe class="footer__map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Xalapa,Veracruz&output=embed"></iframe>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© 2026 AVA Bienes Raíces. Demo de diseño — datos ilustrativos.</span>
+      <span>Hecho con dedicación en Xalapa, Veracruz.</span>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

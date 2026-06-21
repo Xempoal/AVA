@@ -1,0 +1,7 @@
+# Rutas limpias por vendedor (Cloudflare Pages)
+# avabienesraices.com/raul  ->  perfil tipo vCard del vendedor
+/raul     /vendedor.html?v=raul     200
+/carmen   /vendedor.html?v=carmen   200
+/ana      /vendedor.html?v=ana      200
+/carlos   /vendedor.html?v=carlos   200
+/sofia    /vendedor.html?v=sofia    200

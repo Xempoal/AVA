@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detalle de propiedad | AVA Bienes Raíces</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="site-header scrolled">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <img src="img/logo.png" alt="AVA Bienes Raíces" class="brand__logo">
+      </a>
+      <nav class="nav__links">
+        <a href="index.html">Inicio</a>
+        <a href="propiedades.html">Propiedades</a>
+        <a href="index.html#nosotros">Nosotros</a>
+        <a href="index.html#contacto">Contacto</a>
+      </nav>
+      <div class="nav__cta">
+        <a href="https://wa.me/522281234500" class="btn btn--wa">WhatsApp</a>
+        <button class="nav__toggle" aria-label="Menú"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="detail">
+    <div class="container">
+      <p class="breadcrumb" style="color:var(--muted); margin-bottom:14px"><a href="index.html">Inicio</a> / <a href="propiedades.html">Propiedades</a> / Detalle</p>
+      <div class="gallery" id="gallery"></div>
+
+      <div class="detail__grid">
+        <div id="detail-main"></div>
+        <aside id="sidebar"></aside>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head"><h2>Propiedades similares</h2></div>
+        <div class="grid-cards" id="relacionadas"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" id="lb-close" aria-label="Cerrar">&times;</button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lb-prev" aria-label="Anterior">&#10094;</button>
+    <img id="lb-img" src="" alt="Foto de la propiedad">
+    <button class="lightbox__nav lightbox__nav--next" id="lb-next" aria-label="Siguiente">&#10095;</button>
+    <div class="lightbox__count" id="lb-count"></div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <a href="index.html" class="brand">
+          <img src="img/logo.png" alt="AVA Bienes Raíces" class="brand__logo">
+        </a>
+        <p style="margin-top:16px; max-width:280px;">Inmobiliaria en Xalapa, Veracruz.</p>
+      </div>
+      <div>
+        <h4>Navegación</h4>
+        <a href="index.html">Inicio</a>
+        <a href="propiedades.html">Propiedades</a>
+        <a href="index.html#nosotros">Nosotros</a>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <a href="tel:+522281234500">228 123 4500</a>
+        <a href="mailto:contacto@avabienesraices.com">contacto@avabienesraices.com</a>
+      </div>
+      <div>
+        <h4>Ubicación</h4>
+        <iframe class="footer__map" loading="lazy" src="https://www.google.com/maps?q=Xalapa,Veracruz&output=embed"></iframe>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© 2026 AVA Bienes Raíces. Demo de diseño — datos ilustrativos.</span>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/propiedad.js"></script>
+</body>
+</html>
