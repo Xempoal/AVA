@@ -277,9 +277,9 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 .cat-card { position: relative; border-radius: var(--radius); overflow: hidden; aspect-ratio: 3/4; display: block; box-shadow: var(--shadow-sm); }
 .cat-card img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
 .cat-card:hover img { transform: scale(1.07); }
-.cat-card__overlay { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 22px; color: #fff; background: linear-gradient(180deg, rgba(20,30,24,0) 35%, rgba(20,30,24,.85) 100%); }
-.cat-card__overlay h3 { font-size: 1.3rem; font-weight: 600; }
-.cat-card__overlay span { font-size: .85rem; opacity: .85; margin-top: 2px; }
+.cat-card__overlay { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 18px; color: #fff; background: linear-gradient(180deg, rgba(20,30,24,0) 35%, rgba(20,30,24,.85) 100%); }
+.cat-card__overlay h3 { font-size: clamp(1rem, 2.4vw, 1.25rem); font-weight: 600; line-height: 1.15; word-break: break-word; hyphens: auto; }
+.cat-card__overlay span { font-size: .82rem; opacity: .85; margin-top: 3px; }
 .cat-card::after { content: "→"; position: absolute; top: 16px; right: 16px; width: 38px; height: 38px; background: rgba(255,255,255,.18); border-radius: 50%; display: grid; place-items: center; color: #fff; backdrop-filter: blur(4px); transition: background .25s, transform .25s; }
 .cat-card:hover::after { background: var(--blue); transform: translateX(3px); }
 
