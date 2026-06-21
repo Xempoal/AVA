@@ -67,8 +67,15 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
   transition: transform .2s ease, background .2s ease, color .2s ease;
 }
 .btn:hover { transform: translateY(-2px); }
-.btn--primary { background: var(--forest); color: #fff; }
-.btn--primary:hover { background: var(--forest-2); }
+.btn--primary { background: var(--blue); color: #fff; }
+.btn--primary:hover { background: var(--blue-dark); }
+/* Botón "Contactar" del header: compacto, poco redondeado, estilizado */
+.btn--contact {
+  background: var(--blue); color: #fff; border-radius: 8px;
+  padding: 9px 18px; font-size: .88rem; letter-spacing: .01em;
+  box-shadow: 0 4px 14px rgba(31,99,214,.35);
+}
+.btn--contact:hover { background: var(--blue-dark); transform: translateY(-1px); }
 .btn--gold { background: var(--blue); color: #fff; }
 .btn--gold:hover { background: var(--blue-dark); color: #fff; }
 .btn--blue { background: var(--blue); color: #fff; }
@@ -171,7 +178,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
   position: absolute; top: 14px; left: 14px; padding: 6px 13px; border-radius: 999px;
   font-size: .73rem; font-weight: 700; letter-spacing: .04em; color: #fff; backdrop-filter: blur(3px);
 }
-.badge--venta { background: rgba(28,58,42,.92); }
+.badge--venta { background: rgba(31,99,214,.95); }
 .badge--renta { background: rgba(192,160,92,.95); color: var(--forest); }
 .card__type { position: absolute; top: 14px; right: 14px; background: rgba(255,255,255,.92); color: var(--forest); padding: 6px 12px; border-radius: 999px; font-size: .73rem; font-weight: 700; }
 .card__body { padding: 20px; display: flex; flex-direction: column; flex: 1; }
@@ -314,7 +321,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
   border-radius: var(--radius-sm); font-weight: 600; font-size: .92rem; transition: all .18s ease;
 }
 .choice__btn:hover { border-color: var(--gold); }
-.choice__btn.active { background: var(--forest); color: #fff; border-color: var(--forest); }
+.choice__btn.active { background: var(--blue); color: #fff; border-color: var(--blue); }
 
 /* Pasos que aparecen progresivamente */
 .contact-step { display: none; }
@@ -426,9 +433,16 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
   .cat-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
   .cat-card { aspect-ratio: 1/1; }
   .credits-grid { grid-template-columns: 1fr; }
-  .team-grid { grid-template-columns: 1fr; }
-  .team-card { gap: 14px; padding: 14px; }
-  .team-card__photo { width: 76px; height: 76px; }
+  /* Equipo en móvil: carrusel horizontal con scroll (no una lista larga) */
+  .team-grid {
+    display: flex; grid-template-columns: none; gap: 14px;
+    overflow-x: auto; scroll-snap-type: x mandatory;
+    margin: 0 -22px; padding: 4px 22px 14px; -webkit-overflow-scrolling: touch;
+  }
+  .team-grid::-webkit-scrollbar { height: 5px; }
+  .team-grid::-webkit-scrollbar-thumb { background: var(--line); border-radius: 4px; }
+  .team-card { flex: 0 0 84%; scroll-snap-align: start; gap: 14px; padding: 14px; }
+  .team-card__photo { width: 72px; height: 72px; }
   .contact-card { padding: 22px; }
   .vcard__actions { flex-direction: column; }
   .stats { flex-wrap: wrap; gap: 22px; }

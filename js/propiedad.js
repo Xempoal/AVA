@@ -69,15 +69,16 @@ function renderDetalle() {
 
   document.getElementById("sidebar").innerHTML = `
     <div class="sidebar-card">
-      <div class="agent">
+      <a href="vendedor.html?v=${ag.slug}" class="agent" style="text-decoration:none;color:inherit">
         <img src="${ag.foto}" alt="${ag.nombre}">
-        <div>
+        <div style="display:flex;flex-direction:column">
           <b>${ag.nombre}</b>
           <span>${ag.cargo}</span>
+          <span style="color:var(--blue);font-weight:600;font-size:.82rem;margin-top:2px">Ver perfil del asesor &rarr;</span>
         </div>
-      </div>
+      </a>
       <a href="${wa}" class="btn btn--wa btn--block btn--lg">Contactar por WhatsApp</a>
-      <a href="tel:+${ag.tel}" class="btn btn--ghost btn--block">Llamar al asesor</a>
+      <a href="vendedor.html?v=${ag.slug}" class="btn btn--ghost btn--block">Ver perfil del asesor</a>
       <hr style="border:0; border-top:1px solid var(--line); margin:18px 0">
       <h3 style="font-family:var(--font-body); font-size:1rem; margin-bottom:12px">Solicitar información</h3>
       <form id="lead-form">
