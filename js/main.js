@@ -203,8 +203,8 @@ function initHero() {
   gsap.set(frames, { opacity: 0 });
   gsap.set(frames[0], { opacity: 1 });
   gsap.set(frames[0].querySelector("img"), { scale: 1.0 });
-  gsap.set(captions, { opacity: 0, y: 24 });
-  if (captions[0]) gsap.set(captions[0], { opacity: 1, y: 0 });
+  gsap.set(captions, { opacity: 0 });
+  if (captions[0]) gsap.set(captions[0], { opacity: 1 });
 
   const tl = gsap.timeline({
     scrollTrigger: {
@@ -233,8 +233,8 @@ function initHero() {
   // Captions sincronizados a cada paso
   captions.forEach((cap, i) => {
     if (i === 0) return;
-    tl.to(captions[i - 1], { opacity: 0, y: -24, duration: 0.3 }, i - 0.3);
-    tl.to(cap, { opacity: 1, y: 0, duration: 0.4 }, i - 0.1);
+    tl.to(captions[i - 1], { opacity: 0, duration: 0.3 }, i - 0.3);
+    tl.to(cap, { opacity: 1, duration: 0.4 }, i - 0.1);
   });
 
   // Refresca al cargar imágenes
