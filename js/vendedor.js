@@ -82,8 +82,8 @@ function renderVendedor() {
       <p class="vc__intro">${a.bio}</p>
 
       <div class="vc__cta">
-        <a class="btn btn--blue btn--lg" href="tel:+${a.tel}">Llamar ahora</a>
-        <a class="btn btn--wa btn--lg" href="${wa}">WhatsApp</a>
+        <a class="btn btn--blue" href="tel:+${a.tel}">Llamar ahora</a>
+        <a class="btn btn--wa" href="${wa}">WhatsApp</a>
       </div>
 
       <div class="vc__trust">

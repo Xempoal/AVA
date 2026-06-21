@@ -132,7 +132,7 @@ function renderEquipo() {
   wrap.innerHTML = Object.values(AGENTES).map((a) => {
     const n = propsDeAgente(a.slug).length;
     return `
-    <a href="vendedor.html?v=${a.slug}" class="team-card reveal">
+    <a href="vendedor.html?v=${a.slug}" class="team-card">
       <div class="team-card__photo"><img src="${a.foto}" alt="${a.nombre}" loading="lazy"></div>
       <div class="team-card__info">
         <h3>${a.nombre}</h3>
