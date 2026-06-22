@@ -298,14 +298,14 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 }
 .logo-band:hover .logo-band__track { animation-play-state: paused; }
 .logo-band__item {
-  flex: 0 0 auto; height: 56px; display: grid; place-items: center;
-  padding: 18px 28px; background: #fff; border: 1px solid var(--line);
-  border-radius: var(--radius); box-shadow: var(--shadow-sm);
-  box-sizing: content-box; transition: transform .3s, box-shadow .3s;
+  flex: 0 0 auto; width: 198px; aspect-ratio: 360 / 200;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: var(--shadow-sm); overflow: hidden;
+  transition: transform .3s, box-shadow .3s;
 }
 .logo-band__item:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
 .logo-band__item img {
-  height: 100%; width: auto; max-width: 190px; object-fit: contain;
+  width: 100%; height: 100%; object-fit: cover; display: block;
 }
 @keyframes logo-scroll {
   from { transform: translateX(0); }
@@ -456,7 +456,8 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
   .grid-cards, .grid-cards--2 { grid-template-columns: 1fr; }
   .cat-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
   .cat-card { aspect-ratio: 1/1; }
-  .logo-band__item { height: 44px; padding: 14px 20px; }
+  .logo-band__item { width: 160px; }
+  .logo-band__track { gap: 44px; padding-right: 44px; }
   /* Equipo en móvil: carrusel horizontal fluido */
   .team-grid {
     display: flex; grid-template-columns: none; gap: 14px;
