@@ -187,6 +187,60 @@ function initContactForm() {
   });
 }
 
+/* ===========================================================
+   HERO SCROLLYTELLING — GSAP + ScrollTrigger con pinning
+   =========================================================== */
+function initHero() {
+  const pin = document.querySelector(".hero__pin");
+  if (!pin || typeof gsap === "undefined") return;
+  gsap.registerPlugin(ScrollTrigger);
+
+  const frames = gsap.utils.toArray(".hero__frame");
+  const captions = gsap.utils.toArray(".hero__caption[data-step]");
+  const total = frames.length;
+
+  // Estado inicial
+  gsap.set(frames, { opacity: 0 });
+  gsap.set(frames[0], { opacity: 1 });
+  gsap.set(frames[0].querySelector("img"), { scale: 1.0 });
+  gsap.set(captions, { opacity: 0 });
+  if (captions[0]) gsap.set(captions[0], { opacity: 1 });
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".hero",
+      start: "top top",
+      end: "bottom bottom",
+      scrub: 1,
+      pin: ".hero__pin",
+      anticipatePin: 1,
+    },
+  });
+
+  // Recorrido: crossfade + zoom de cámara hacia adelante por cada frame
+  for (let i = 0; i < total; i++) {
+    const img = frames[i].querySelector("img");
+    // zoom continuo dentro de cada frame (sensación de avanzar)
+    tl.fromTo(img, { scale: 1.0 }, { scale: 1.12, ease: "none", duration: 1 }, i);
+
+    if (i < total - 1) {
+      // crossfade hacia el siguiente
+      tl.to(frames[i], { opacity: 0, duration: 0.5, ease: "power1.inOut" }, i + 0.55);
+      tl.to(frames[i + 1], { opacity: 1, duration: 0.5, ease: "power1.inOut" }, i + 0.55);
+    }
+  }
+
+  // Captions sincronizados a cada paso
+  captions.forEach((cap, i) => {
+    if (i === 0) return;
+    tl.to(captions[i - 1], { opacity: 0, duration: 0.3 }, i - 0.3);
+    tl.to(cap, { opacity: 1, duration: 0.4 }, i - 0.1);
+  });
+
+  // Refresca al cargar imágenes
+  window.addEventListener("load", () => ScrollTrigger.refresh());
+}
+
 /* ---- init ---- */
 document.addEventListener("DOMContentLoaded", () => {
   initHeader();
@@ -197,4 +251,5 @@ document.addEventListener("DOMContentLoaded", () => {
   renderEquipo();
   initContactForm();
   initReveal();
+  initHero();
 });
