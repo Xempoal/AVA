@@ -113,16 +113,19 @@ function renderCategorias() {
   }).join("");
 }
 
-/* ---- Créditos ---- */
+/* ---- Créditos: banda de logos que rota sola (marquee infinito) ---- */
 function renderCreditos() {
   const wrap = document.getElementById("creditos");
   if (!wrap || typeof CREDITOS === "undefined") return;
-  wrap.innerHTML = CREDITOS.map((c, i) => `
-    <div class="credit-card reveal" style="transition-delay:${i * 80}ms">
-      <span class="credit-card__num">0${i + 1}</span>
-      <h3>${c.nombre}</h3>
-      <p>${c.desc}</p>
-    </div>`).join("");
+  const item = (c) => `
+    <div class="logo-band__item" title="${c.nombre}">
+      <img src="${c.logo}" alt="${c.nombre}" loading="lazy">
+    </div>`;
+  // Se duplica la pista para que el bucle sea continuo y sin saltos.
+  const track = CREDITOS.map(item).join("");
+  wrap.innerHTML = `
+    <div class="logo-band__track" aria-hidden="false">${track}</div>
+    <div class="logo-band__track" aria-hidden="true">${track}</div>`;
 }
 
 /* ---- Equipo (home) ---- */

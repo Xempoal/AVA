@@ -343,10 +343,14 @@ const CATEGORIAS = [
   { tipo: "local", label: "Locales comerciales", img: IMG(LOCALES[0]) },
 ];
 
-/* Tipos de crédito que maneja la inmobiliaria */
+/* Créditos y entidades financieras que maneja la inmobiliaria (banda de logos) */
 const CREDITOS = [
-  { nombre: "Infonavit", desc: "Usa tu crédito Infonavit para adquirir tu vivienda. Te ayudamos con todo el trámite y precalificación." },
-  { nombre: "Fovissste", desc: "Si trabajas en el sector público, aprovecha tu crédito Fovissste con asesoría completa de inicio a fin." },
-  { nombre: "Crédito bancario", desc: "Trabajamos con los principales bancos del país para conseguirte la mejor tasa hipotecaria." },
-  { nombre: "Cofinavit", desc: "Combina tu Infonavit con un crédito bancario y amplía tu poder de compra para una mejor propiedad." },
+  { nombre: "Infonavit", logo: "img/creditos/infonavit.png" },
+  { nombre: "Fovissste", logo: "img/creditos/fovissste.png" },
+  { nombre: "Citibanamex", logo: "img/creditos/citibanamex.png" },
+  { nombre: "Scotiabank", logo: "img/creditos/scotiabank.png" },
+  { nombre: "Banorte", logo: "img/creditos/banorte.png" },
+  { nombre: "Santander", logo: "img/creditos/santander.png" },
+  { nombre: "HSBC", logo: "img/creditos/hsbc.png" },
+  { nombre: "SOC Asesores Hipotecarios", logo: "img/creditos/soc.png" },
 ];
