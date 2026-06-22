@@ -126,14 +126,16 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 .nav__toggle { display: none; background: none; border: 0; flex-direction: column; gap: 5px; }
 .nav__toggle span { width: 26px; height: 2px; background: currentColor; display: block; }
 
-/* ---------- Hero: recorrido 3D guiado por scroll ---------- */
+/* ---------- Hero: cámara guiada por scroll a través de fotos reales (CSS 3D) ---------- */
 .hero { position: relative; height: 600vh; background: #0d1420; }
 .hero__pin { position: sticky; top: 0; height: 100vh; overflow: hidden; }
-#hero3d-canvas { position: absolute; inset: 0; display: block; width: 100%; height: 100%; z-index: 0; }
-.hero__vignette {
-  position: absolute; inset: 0; z-index: 1; pointer-events: none;
-  background: radial-gradient(120% 90% at 50% 100%, rgba(8,12,20,.05) 0%, rgba(8,12,20,.55) 100%),
-    linear-gradient(180deg, rgba(10,16,26,.45) 0%, rgba(10,16,26,0) 28%, rgba(10,16,26,0) 60%, rgba(10,16,26,.6) 100%);
+.hero__tunnel { position: absolute; inset: 0; z-index: 0; overflow: hidden; perspective: 1200px; perspective-origin: 50% 50%; background: #0d1420; }
+.hero__world { position: absolute; inset: 0; transform-style: preserve-3d; will-change: transform; }
+.hero__frame { position: absolute; inset: 0; transform-style: preserve-3d; backface-visibility: hidden; will-change: transform, opacity; opacity: 0; }
+.hero__frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hero__frame::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(10,16,26,.5) 0%, rgba(10,16,26,.08) 30%, rgba(10,16,26,.1) 62%, rgba(10,16,26,.65) 100%);
 }
 .hero__progress { position: absolute; top: 0; left: 0; right: 0; height: 3px; z-index: 6; background: rgba(255,255,255,.12); }
 .hero__progress span { display: block; height: 100%; width: 0%; background: var(--gold, #c9a24b); transition: width .05s linear; }

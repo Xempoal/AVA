@@ -35,11 +35,19 @@
     </div>
   </header>
 
-  <!-- ===== Hero: recorrido 3D guiado por scroll ===== -->
+  <!-- ===== Hero: cámara guiada por scroll a través de la casa (fotos reales) ===== -->
   <section class="hero" id="hero3d">
     <div class="hero__pin">
-      <canvas id="hero3d-canvas"></canvas>
-      <div class="hero__vignette"></div>
+      <div class="hero__tunnel">
+        <div class="hero__world" id="hero3d-world">
+          <div class="hero__frame"><img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1900&q=80" alt="Fachada de casa moderna" /></div>
+          <div class="hero__frame"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1900&q=80" alt="Recibidor" /></div>
+          <div class="hero__frame"><img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1900&q=80" alt="Sala de estar" /></div>
+          <div class="hero__frame"><img src="https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&w=1900&q=80" alt="Cocina integral" /></div>
+          <div class="hero__frame"><img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1900&q=80" alt="Recámara principal" /></div>
+          <div class="hero__frame"><img src="https://images.unsplash.com/photo-1600047509782-20d39509f26d?auto=format&fit=crop&w=1900&q=80" alt="Jardín y terraza" /></div>
+        </div>
+      </div>
       <div class="hero__progress"><span id="hero3d-progress-bar"></span></div>
 
       <div class="hero__content">
@@ -290,7 +298,6 @@
     </div>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
   <script src="js/data.js"></script>
   <script src="js/hero3d.js"></script>
   <script src="js/main.js"></script>
